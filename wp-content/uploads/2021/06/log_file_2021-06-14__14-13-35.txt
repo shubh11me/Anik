@@ -1,0 +1,16 @@
+
+---Downloaded files---
+The import files for: Import SKT Corporate Lite Demo were successfully downloaded!
+Initial max execution time = 120
+Files info:
+Site URL = http://localhost/com.anikfin.com
+Data file = C:\xampp\htdocs\com.anikfin.com/wp-content/themes/skt-corporate-lite/demo-content/demo-content.xml
+Widget file = not defined!
+Customizer file = not defined!
+
+---Importing content---
+
+Max execution time after content import = 300
+
+---theme-demo-import/after_import---
+

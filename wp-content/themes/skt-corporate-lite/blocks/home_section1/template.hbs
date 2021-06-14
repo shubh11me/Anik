@@ -1,0 +1,160 @@
+<div id="home-section1-block-{{id}}" class="skt-builder-block-wrapper skt-builder-home-section1-block skt-builder-home-section1-block-{{id}}" style="background-color: {{blockBackgroundColor}}; background-image: url({{blockBgImageUrl}}); padding-bottom: {{blockPaddingBottom}}px; padding-top: {{blockPaddingTop}}px; {{#if blockParallaxEffect}}background-attachment: fixed;{{/if}}">
+	<div class="skt-builder-block-inner skt-builder-block-inner-{{id}}" style="{{#if blockAnimation}}visibility: hidden;{{/if}}">
+		<div class="skt-builder-container">
+        	<style>
+				.skt-builder-home-section1-block-{{id}} .skt-builder-solution-inner p {color:{{blockDescriptionColor}};}
+				.skt-builder-home-section1-block-{{id}} .skt-builder-block-button{background-color: {{aboutButtonBgColor}}; color: {{aboutButtonTextColor}};}
+				.skt-builder-home-section1-block-{{id}} .skt-builder-block-button:hover{background-color: {{aboutButtonHoverBgColor}}; color: {{aboutButtonHoverTextColor}};}				
+				.skt-builder-home-section1-block-{{id}} .skt-builder-block-button2{border-color: {{contactButtonBgColor}}; color: {{contactButtonTextColor}};}
+				.skt-builder-home-section1-block-{{id}} .skt-builder-block-button2:hover{background-color: {{contactButtonHoverBgColor}}; color: {{contactButtonHoverTextColor}};}
+				.skt-builder-home-section1-block-{{id}} .skt-builder-solution-inner {background: linear-gradient(to bottom, {{boxGRColor}}, {{boxBGColor}});}
+            </style>
+			<div class="skt-builder-columns-row skt-builder-columns-row-2column">
+				{{#if blockSwitchPosition}}
+					<div class="skt-builder-column">
+                        <div class="skt-builder-column-inner skt-builder-solution-inner" style="margin-top:{{colorBoxtopAlignment}}px;">
+                            {{#if blockTitle}}
+                                <div class="skt-builder-block-title" style="text-align: {{blockTitleAlign}};">
+                                    <h2 style="color: {{blockTitleColor}}; font-size: {{blockTitleFontSize}}px; {{#if blockTitleSeparator}}margin-bottom: 0;{{else}}margin-bottom: {{blockTitleMarginBottom}}px;{{/if}} text-align: {{blockTitleAlign}};"><small style="color: {{blocktopTitleColor}}; font-size: {{blocktopTitleFontSize}}px;">{{blocktopTitle}}</small> {{blockTitle}}</h2>
+                                    {{#if blockTitleSeparator}}<div class="skt-builder-block-title-separator" style="background-color: {{blockTitleSeparatorColor}}; margin-bottom: {{blockTitleMarginBottom}}px;"></div>{{/if}}
+                                </div>
+                            {{/if}}
+                            {{#if blockDescription}}
+                                <div class="skt-builder-column-inner">{{{blockDescription}}}</div>
+                            {{/if}}
+                            {{#if aboutButtonText}}
+                            	<a class="skt-builder-block-button" href="{{aboutButtonLink}}" {{#if aboutButtonLinkTarget}}target="_blank"{{/if}}>{{aboutButtonText}}</a>
+                            {{/if}}
+                            {{#if contactButtonText}}
+                            	<a class="skt-builder-block-button2" href="{{contactButtonLink}}" {{#if contactButtonLinkTarget}}target="_blank"{{/if}}>{{contactButtonText}}</a>
+                            {{/if}}
+                        </div>
+					</div>
+					<div class="skt-builder-column">
+                        <div class="skt-builder-column-inner skt-builder-columns-row skt-builder-about-inner">
+                        {{#if blockColumns.length}}
+                            {{#each_with_sort blockColumns "order"}}
+                                <div class="skt-builder-about-column skt-builder-about-column{{id}}" style="border-bottom-color:{{columnBorderColor}};">
+                                    {{#if columnContent}}                                        
+                                        <div class="skt-builder-column-inner">
+                                            {{#if columnLink}}<a href="{{columnLink}}" {{#if columnLinkTarget}}target="_blank"{{/if}}>{{/if}}
+                                                <div class="skt-builder-about-column-icon"><img src="{{columnIcon}}"></div>
+                                            {{#if columnLink}}</a>{{/if}}
+                                            <div class="skt-builder-about-column-content">
+                                            	 <style>
+													.skt-builder-about-column{{id}} h3.skt-builder-about-column-title a{color: {{titleColor}};}
+													.skt-builder-about-column{{id}} h3.skt-builder-about-column-title a:hover{color: {{titleHoverColor}};}
+												 </style>
+                                                <h3 class="skt-builder-about-column-title" style="text-align: {{blockColumnsTitleAlign}};">
+                                                    {{#if columnLink}}<a href="{{columnLink}}" {{#if columnLinkTarget}}target="_blank"{{/if}}>{{/if}}
+                                                        {{title}}
+                                                    {{#if columnLink}}</a>{{/if}}
+                                                </h3>
+                                                {{{columnContent}}}
+                                            </div>
+                                        </div>
+                                    {{/if}}
+                                </div>
+                            {{/each_with_sort}}
+                        {{/if}}
+                        </div>
+					</div>
+				{{else}}
+                	<div class="skt-builder-column">
+                        <div class="skt-builder-columns-row skt-builder-about-inner">
+                        {{#if blockColumns.length}}
+                            {{#each_with_sort blockColumns "order"}}
+                                <div class="skt-builder-about-column skt-builder-about-column{{id}}" style="border-bottom-color:{{columnBorderColor}};">
+                                    {{#if columnContent}}
+                                        <div class="skt-builder-column-inner">
+                                            {{#if columnLink}}<a href="{{columnLink}}" {{#if columnLinkTarget}}target="_blank"{{/if}}>{{/if}}
+                                                <div class="skt-builder-about-column-icon"><img src="{{columnIcon}}"></div>
+                                            {{#if columnLink}}</a>{{/if}}
+                                            <style>
+												.skt-builder-about-column{{id}} h3.skt-builder-about-column-title a{color: {{titleColor}};}
+												.skt-builder-about-column{{id}} h3.skt-builder-about-column-title a:hover{color: {{titleHoverColor}};}
+											</style>
+                                            <h3 class="skt-builder-about-column-title" style="text-align: {{blockColumnsTitleAlign}};">
+                                                {{#if columnLink}}<a href="{{columnLink}}" {{#if columnLinkTarget}}target="_blank"{{/if}}>{{/if}}
+                                                    {{title}}
+                                                {{#if columnLink}}</a>{{/if}}
+                                            </h3>
+                                            {{{columnContent}}}
+                                        </div>
+                                    {{/if}}
+                                </div>
+                            {{/each_with_sort}}
+                        {{/if}}
+                        </div>
+					</div>
+					<div class="skt-builder-column">
+                        <div class="skt-builder-column-inner skt-builder-solution-inner" style="margin-top:{{colorBoxtopAlignment}}px;">
+                            {{#if blockTitle}}
+                                <div class="skt-builder-block-title" style="text-align: {{blockTitleAlign}};">
+                                    <h2 style="color: {{blockTitleColor}}; font-size: {{blockTitleFontSize}}px; {{#if blockTitleSeparator}}margin-bottom: 0;{{else}}margin-bottom: {{blockTitleMarginBottom}}px;{{/if}} text-align: {{blockTitleAlign}};"><small style="color: {{blocktopTitleColor}}; font-size: {{blocktopTitleFontSize}}px;">{{blocktopTitle}}</small> {{blockTitle}}</h2>
+                                    {{#if blockTitleSeparator}}<div class="skt-builder-block-title-separator" style="background-color: {{blockTitleSeparatorColor}}; margin-bottom: {{blockTitleMarginBottom}}px;"></div>{{/if}}
+                                </div>
+                            {{/if}}
+                            {{#if blockDescription}}
+                                <div class="skt-builder-column-inner">{{{blockDescription}}}</div>
+                            {{/if}}
+                            {{#if aboutButtonText}}
+                            	<a class="skt-builder-block-button" href="{{aboutButtonLink}}" {{#if aboutButtonLinkTarget}}target="_blank"{{/if}}>{{aboutButtonText}}</a>
+                            {{/if}}
+                            {{#if contactButtonText}}
+                            	<a class="skt-builder-block-button" href="{{contactButtonLink}}" {{#if contactButtonLinkTarget}}target="_blank"{{/if}}>{{contactButtonText}}</a>
+                            {{/if}}
+                        </div>
+					</div>
+				{{/if}}
+			</div>
+		</div>
+	</div>
+</div>
+<script>
+jQuery(document).ready(function() {
+    jQuery('p').each(function() {
+        var $this = jQuery(this);
+        if($this.html().replace(/\s|&nbsp;/g, '').length == 0) {
+            $this.remove();
+        }
+    });
+});
+
+jQuery(document).ready(function() {
+    jQuery('p').each(function() {
+        var $this = jQuery(this);
+        if($this.html().replace(/\s|<br>/g, '').length == 0) {
+            $this.remove();
+        }
+    });
+});
+</script>
+{{#if blockAnimation}}
+<script>
+jQuery.noConflict();
+jQuery(document).ready(function(){
+jQuery(window).scroll(function(){
+    // This is then function used to detect if the element is scrolled into view
+    function elementScrolled(elem)
+    {
+        var docViewTop = jQuery(window).scrollTop();
+        var docViewBottom = docViewTop + jQuery(window).height();
+        var elemTop = jQuery(elem).offset().top;
+        return ((elemTop <= docViewBottom) && (elemTop >= docViewTop));
+    }
+
+	if (jQuery('.skt-builder-block-inner-{{id}}').length > 0) {
+	if(elementScrolled('.skt-builder-block-inner-{{id}}')) {
+        var els = jQuery('.skt-builder-block-inner-{{id}}'),
+            i = 0,
+            f = function () {
+                jQuery(els[i++]).addClass('{{blockAnimationEffect}}');
+                if(i < els.length) setTimeout(f, 400);
+            };
+        f();
+    }}
+});
+});
+</script>
+{{/if}}
